@@ -1,0 +1,93 @@
+   1 │ [window]
+   2 │ opacity = 0.87
+   3 │ decorations = "None"
+   4 │ padding = {x=10,y=10}
+   5 │
+   6 │ [font]
+   7 │ size = 12.0
+   8 │
+   9 │ [font.normal]
+  10 │ family = "Hack Nerd Font Mono"
+  11 │
+  12 │ [font.bold]
+  13 │ family = "Hack Nerd Font Mono"
+  14 │
+  15 │ [font.italic]
+  16 │ family = "Hack Nerd Font Mono"
+  17 │
+  18 │ [font.bold_italic]
+  19 │ family = "Hack Nerd Font Mono"
+  20 │
+  21 │ [colors.primary]
+  22 │ background = "#0b0f14"
+  23 │ foreground = "#d6dde6"
+  24 │
+  25 │ [colors.cursor]
+  26 │ text = "#0b0f14"
+  27 │ cursor = "#4ec9b0"
+  28 │
+  29 │ [colors.selection]
+  30 │ text = "#0b0f14"
+  31 │ background = "#2a3a3f"
+  32 │
+  33 │ [colors.normal]
+  34 │ black   = "#1a1f27"
+  35 │ red     = "#e06c75"
+  36 │ green   = "#4ec9b0"
+  37 │ yellow  = "#d7ba7d"
+  38 │ blue    = "#569cd6"
+  39 │ magenta = "#c678dd"
+  40 │ cyan    = "#56b6c2"
+  41 │ white   = "#cdd6e3"
+  42 │
+[window]
+opacity = 0.87
+decorations = "None"
+padding = {x=10,y=10}
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+
+[colors.primary]
+background = "#0b0f14"
+foreground = "#d6dde6"
+
+[colors.cursor]
+text = "#0b0f14"
+cursor = "#4ec9b0"
+
+[colors.selection]
+text = "#0b0f14"
+background = "#2a3a3f"
+
+[colors.normal]
+black   = "#1a1f27"
+red     = "#e06c75"
+green   = "#4ec9b0"
+yellow  = "#d7ba7d"
+blue    = "#569cd6"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#cdd6e3"
+
+[colors.bright]
+black   = "#2a2f36"
+red     = "#ff7a85"
+green   = "#6ee7d2"
+yellow  = "#f2d38f"
+blue    = "#7aa2f7"
+magenta = "#d18fff"
+cyan    = "#7cdff0"
+white   = "#ffffff"
