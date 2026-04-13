@@ -2,6 +2,9 @@
 
 This is my workflow for hacking. Previously, I used `Kali-minimal`, and honestly, the differences are minimal.
 
+
+![BSPWM](./Entorno.jpg)
+
 ### Minimal recommendations:
 ```javascript
 RAM (Base Memory): 4 GB
