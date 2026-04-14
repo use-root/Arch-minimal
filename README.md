@@ -76,8 +76,11 @@ pacstrap -K /mnt linux linux-firmware base base-devel grub efibootmgr wpa_suppli
 You generate it with:
 
 ```bash
+
 genfstab -U /mnt >> /mnt/etc/fstab
+
 ```
+
 
 What it does:
 - Detects your partitions
@@ -102,34 +105,42 @@ You can now do most of the operations available from your existing installation.
 Now we're able to entry in us system: `arch-chroot /mnt` for install the grub and create the user's.
 
 ```bash
+
 user add -m "user"
 usermod -aG wheel "user" (Wheel is a special grup for make able to the user be root).
 passwed user, passwd = 18733user
+
 ```
 Also here in this point we can put us hostname: `echo "Arch" > /etc/hostname`.
 
 And now we goint to install the grub: 
 
 bash```
+
 grub-install --target=x84_64-efi --efi-directory=/boot --bootloader-id=Grub
 grub-mkconfig -O /boot/grub/grub.cfg
+
 ```
 And... Now we need to reboot the system, and if everything is ok we will see the grub and choose: `Arch linux`, and see the user that was creating and login, and for the internet, we need to creat symbolic links to up the services everytime that we power the system: `systemctl enable NetworkManager.service` and `systemctl enable wpa_supplicant.service` as well.
 
 With that we already have us OS Arch linux. And we can install teh AUR repositorys that isn't officially for the Arch but is supported and maintened for the community so:
 
 ```bash
+
 git clone https:/aur.archlinux.org/paru.git (Local compilation) For my is better less problems in my experience than 'paru-bin'.
 cd /paru
 make -si
+
 ```
 
 And also if we want to more tools we can use the black arch repository:
 
 ```bash
+
 curl -O https://balckarch.org/strap.sh 
 chmod +x strap.sh
 sudo ./strap.sh
+
 ```
 
 And with that you, you have Arch linux, now I choose this for the setup:
