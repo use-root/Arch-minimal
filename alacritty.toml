@@ -1,51 +1,62 @@
 [window]
-opacity = 0.87
-decorations = "None"
-padding = {x=10,y=10}
+
+decorations= "None"
+padding= {x=12,y=12}
+opacity= 0.75
 
 [font]
-size = 12.0
+
+size =  7.2
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+
+family="Hack Nerd Font Mono"
 
 [font.bold]
-family = "Hack Nerd Font Mono"
+
+family="Hack Nerd Font Mono"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
+
+family="Hack Nerd Font Mono"
 
 [font.bold_italic]
-family = "Hack Nerd Font Mono"
+
+family="Hack Nerd Font Mono"
 
 [colors.primary]
+
 background = "#0b0f14"
 foreground = "#d6dde6"
 
 [colors.cursor]
+
 text = "#0b0f14"
-cursor = "#4ec9b0"
+cursor ="#4ec9b0"
 
 [colors.selection]
+
 text = "#0b0f14"
 background = "#2a3a3f"
 
 [colors.normal]
-black   = "#1a1f27"
-red     = "#e06c75"
-green   = "#4ec9b0"
-yellow  = "#d7ba7d"
-blue    = "#569cd6"
+
+black = "#1a1f27"
+red = "#e06c75"
+green = "#4ec9b0"
+yellow = "#d7ba7d"
+blue = "#569cd6"
 magenta = "#c678dd"
-cyan    = "#56b6c2"
-white   = "#cdd6e3"
+cyan = "#56b6c2"
+white = "#cdd6e3"
 
 [colors.bright]
-black   = "#2a2f36"
-red     = "#ff7a85"
-green   = "#6ee7d2"
-yellow  = "#f2d38f"
-blue    = "#7aa2f7"
+
+black = "#2a2f36"
+red = "#ff6a85"
+green = "#6ee7d2"
+yellow = "#f2d38f"
+blue = "#7aa2f7"
 magenta = "#d18fff"
-cyan    = "#7cdff0"
-white   = "#ffffff"
+cyan = "#7cdff0"
+white = "#ffffff"
