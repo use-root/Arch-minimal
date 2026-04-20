@@ -49,9 +49,7 @@ nvme0n1     259:0    0 931.5G  0 disk
 
 ```
 
-#### Mount partitions
-
-Before we get there, we need connection as ethernet or wifi:
+##### Connection as ethernet or wifi:
 
 ```bash
 # Wifi
@@ -75,7 +73,7 @@ But to be honest I like more use: wpa_supplicant (I know that is legacy...):
 
 ```
 
-**Mount parttions:**
+#### Mount parttions:
 
 ```bash
 
@@ -129,19 +127,19 @@ UUID=zzzz-zzzz /boot vfat defaults 0 2
 Without `fstab`, your system will not know how to mount disks on boot.
 
 ---
-Now we use :arch-chroot /mnt (This is the main partition, Where installed the kernel linux).
- 
-You can now do most of the operations available from your existing installation.
 
-Now we're able to entry in us system: `arch-chroot /mnt` for install the grub and create the user's.
+Now we use: `arch-chroot /mnt` (This is the main partition, Where installed the kernel linux). 
+You can now do most of the operations available from your existing installation, for install the grub and create the user's.
 
 ```bash
 
 user add -m "user"
 usermod -aG wheel "user" (Wheel is a special grup for make able to the user be root).
 passwed user, passwd = 18733user
+nano /etc/sudoers (config and uncomment the line wheel)
 
 ```
+
 Also here in this point we can put us hostname: `echo "Arch" > /etc/hostname`.
 
 And now we goint to install the grub: 
@@ -152,6 +150,8 @@ grub-install --target=x84_64-efi --efi-directory=/boot --bootloader-id=Grub
 grub-mkconfig -O /boot/grub/grub.cfg
 
 ```
+---
+
 And... Now we need to reboot the system, and if everything is ok we will see the grub and choose: `Arch linux`. 
 And see the user that was creating, also we need to creat symbolic link to up the services everytime that we power the system: `systemctl enable NetworkManager.service` and `systemctl enable wpa_supplicant.service` as well.
 
@@ -178,7 +178,9 @@ And if you want config the package for your self, here: `File: /etc/pacman.conf`
 
 And with that you, you have Arch linux, now I choose this for the setup:
 
-### Tiling Window Manager:
+---
+
+#### Tiling Window Manager:
 
 I don't use polybar, is a personal choose for my is noise.
 
