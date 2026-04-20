@@ -133,7 +133,7 @@ You can now do most of the operations available from your existing installation,
 
 ```bash
 
-user add -m "user"
+useradd -m "user"
 usermod -aG wheel "user" (Wheel is a special grup for make able to the user be root).
 passwed user, passwd = 18733user
 nano /etc/sudoers (config and uncomment the line wheel)
@@ -147,15 +147,18 @@ And now we goint to install the grub:
 ```bash
 
 grub-install --target=x84_64-efi --efi-directory=/boot --bootloader-id=Grub
-grub-mkconfig -O /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 ```
 ---
 
-And... Now we need to reboot the system, and if everything is ok we will see the grub and choose: `Arch linux`. 
-And see the user that was creating, also we need to creat symbolic link to up the services everytime that we power the system: `systemctl enable NetworkManager.service` and `systemctl enable wpa_supplicant.service` as well.
+Now we need to reboot the system, and if everything is ok we will see the grub and choose: `Arch linux`. 
+And see the user that was creating, also we need to creat symbolic link to up the services everytime that we power the system: 
+- `systemctl enable NetworkManager.service` 
+- `systemctl enable wpa_supplicant.service`
 
-With that we already have us OS Arch linux. And we can install teh AUR repositorys that isn't officially for the Arch but is supported and maintened for the community so:
+With that we already have us OS Arch linux.
+And we can install teh AUR repositorys that isn't officially for the Arch but is supported and maintened for the community so:
 
 ```bash
 
@@ -176,7 +179,7 @@ sudo ./strap.sh
 ```
 And if you want config the package for your self, here: `File: /etc/pacman.conf`
 
-And with that you, you have Arch linux, now I choose this for the setup:
+And with that you have Arch linux, Now I choose this for the setup:
 
 ---
 
