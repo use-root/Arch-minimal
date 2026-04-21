@@ -41,8 +41,7 @@ swapon /dev/sda4
 
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 931.5G  0 disk
-├─nvme0n1p1 259:1    0   512M  0 part /boot
-├─nvme0n1p2 259:2    0   100G  0 part /
+├─nvme0n1p1 259:1    0   512M  0 part /boot ├─nvme0n1p2 259:2    0   100G  0 part /
 ├─nvme0n1p3 259:3    0   130G  0 part /var  (This is optional :)
 ├─nvme0n1p4 259:4    0    16G  0 part [SWAP]
 └─nvme0n1p5 259:5    0   685G  0 part /home
@@ -67,8 +66,11 @@ And you have internet!
 But to be honest I like more use: wpa_supplicant (I know that is legacy...):
 
 > ip link set 'interface' up
+
 > wpa_passphrase "SSID" "contraseña" > wifi.conf (Temp file)
+
 > wpa_supplicant -B -i 'interface' -c wifi.conf
+
 > dhcpcd 'interface'
 
 ```
@@ -77,10 +79,9 @@ But to be honest I like more use: wpa_supplicant (I know that is legacy...):
 
 ```bash
 
-mkdir -p /mnt/{boot,home}
-mount /dev/sda2 /mnt
-mount /dev/sda1 /mnt/boot
-mount /dev/sda3 /mnt/home
+> mkdir -p /mnt/{boot,home}
+> mount /dev/sda2 /mnt
+> mount /dev/sda1 /mnt/boot
 
 pacstrap -K /mnt linux linux-firmware base base-devel grub efibootmgr wpa_supplicant networkmanager
 
@@ -106,7 +107,7 @@ You generate it with:
 
 ```bash
 
-genfstab -U /mnt >> /mnt/etc/fstab
+> genfstab -U /mnt >> /mnt/etc/fstab
 
 ```
 
@@ -119,9 +120,11 @@ What it does:
 Example:
 
 ```bash
-UUID=xxxx-xxxx / ext4 defaults 0 1
-UUID=yyyy-yyyy /home ext4 defaults 0 2
-UUID=zzzz-zzzz /boot vfat defaults 0 2
+> UUID=xxxx-xxxx / ext4 defaults 0 1
+
+> UUID=yyyy-yyyy /home ext4 defaults 0 2
+
+> UUID=zzzz-zzzz /boot vfat defaults 0 2
 ```
 
 Without `fstab`, your system will not know how to mount disks on boot.
@@ -133,10 +136,13 @@ You can now do most of the operations available from your existing installation,
 
 ```bash
 
-useradd -m "user"
-usermod -aG wheel "user" (Wheel is a special grup for make able to the user be root).
-passwed user, passwd = 18733user
-nano /etc/sudoers (config and uncomment the line wheel)
+> useradd -m "user"
+
+> usermod -aG wheel "user" (Wheel is a special grup for make able to the user be root).
+
+> passwed user, passwd = 18733user
+
+> nano /etc/sudoers (config and uncomment the line wheel)
 
 ```
 
@@ -146,8 +152,9 @@ And now we goint to install the grub:
 
 ```bash
 
-grub-install --target=x84_64-efi --efi-directory=/boot --bootloader-id=Grub
-grub-mkconfig -o /boot/grub/grub.cfg
+> grub-install --target=x84_64-efi --efi-directory=/boot --bootloader-id=Grub
+
+> grub-mkconfig -o /boot/grub/grub.cfg
 
 ```
 ---
@@ -172,47 +179,69 @@ And also if we want to more tools we can use the black arch repository:
 
 ```bash
 
-curl -O https://balckarch.org/strap.sh 
-chmod +x strap.sh
-sudo ./strap.sh
+> curl -O https://balckarch.org/strap.sh 
+
+> chmod +x strap.sh
+
+> sudo ./strap.sh
 
 ```
 And if you want config the package for your self, here: `File: /etc/pacman.conf`
 
-And with that you have Arch linux, Now I choose this for the setup:
-
----
-
 #### Tiling Window Manager:
 
-I don't use polybar, is a personal choose for my is noise.
+*I don't use polybar, is a personal choose*
 
-- Bwpwm + Sxhkd
+- Bspwm + Sxhkd:
 
+I've choose xorg insted of Wyland for the compatibile, but in the future, I will change to Wyland for suree! (And also have Nvidia :( )
 
+Package that installed :
 
-- Picom
+```bash
 
+> pacman -S xorg xorg-server xorg-xinit
 
+```
+
+These are meta-package, and the configuration of the .xinitrc to start your environment.
+I prefer to create my own file .xinitrc, but also exist this : `/etc/X11/xinit/.xinitrc`, but if you take a look most of the configuration is legacy.
+
+I copy the example files of the "baskerville" repository of both bspwm and sxhkd:
+
+```bash
+
+> git clone https://github.com/baskerville/bspwm.git
+
+> pacman -S sxhkd bspwm
+
+```
+- Picom:
+
+I use the picom to only get a opacity and a corner-radius and sometimes shadows, However now I don't use shadows.
+
+How install? : is very esaly because Arch linux is rolling release so (You don't need to build for your self)
+
+```bash
+
+> pacman -S picom 
+
+> picom --version
+v13 (/srcdest/picom revision d87a5ba)
+
+```
 
 - Terminal: Alacritty
 
 
-- Shell: zsh
+- Shell: zsh (Powerleve10k):
+
+For change your default shell: `chsh -s /bin/zsh`, because I use powerlevel10k and two pluggins 
 
 
 - Rofi (launcher)
 
 
-- Bat (alias for cat)
-
-
-- Lsd (alias for ls)
-
-
-- Powerlevel10k (Zsh theme)
-
-
-- Neovim
-
+- Bat (alias for cat) and Lsd (alias for ls):
+There are a fancy one, with more colors and more icons and also with syntaxys thast why I added into my environment 
 
