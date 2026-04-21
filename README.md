@@ -2,6 +2,9 @@
 
 This is my workflow for develoment and hacking. Previously, I used `Kali-minimal`, and honestly, the differences are huge. 
 
+![Enviroment Minimal](./evironment.png)
+
+
 #### Minimal recommendations
 
 ```javascript
