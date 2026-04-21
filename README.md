@@ -243,5 +243,7 @@ For change your default shell: `chsh -s /bin/zsh`, because I use powerlevel10k a
 
 
 - Bat (alias for cat) and Lsd (alias for ls):
-There are a fancy one, with more colors and more icons and also with syntaxys thast why I added into my environment 
+There are a fancy one, with more colors and more icons and also with syntax that is why I added into my environment 
 
+
+###### And that's all , My first try in Arch linux... :
