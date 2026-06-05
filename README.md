@@ -19,7 +19,7 @@ Disk: 100GB more is always better
 
 |                                                                        |                                                                          |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------   |
-| <img src="./evironment.png" alt="dark" style="border-radius:2%"/>      | <img src="./environment2.png " alt="dark" style="border-radius:2%"/> |
+| <img src="./evironment.png" alt="dark" style="border-radius:2%"/>      | <img src="./evironment2.png" alt="dark" style="border-radius:2%"/> |
 
 ---
 ### Disk partitioning
