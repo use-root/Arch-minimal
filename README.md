@@ -13,15 +13,15 @@
 
 |                                                                             |                                                                             |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| <img src="./Images/environment.png" alt="dark" style="border-radius:10%"/>  | <img src="./Images/environment2.png" alt="dark" style="border-radius:10%"/> |
-| <img src="./Images/environment3.png" alt="dark" style="border-radius:10%"/> | <img src="./environment_editor.png" alt="dark" style="border-radius:10%"/>  |
+| <img src="./Images/environment.png" alt="dark" style="border-radius:15%"/>  | <img src="./Images/environment2.png" alt="dark" style="border-radius:15%"/> |
+| <img src="./Images/environment3.png" alt="dark" style="border-radius:15%"/> | <img src="./environment_editor.png" alt="dark" style="border-radius:15%"/>  |
 
-##### My environment
+#### My environment
 
-- **Bspwm & Sxhkd**
-- **Alacritty & Nvim**
-- **Obsidian**
-- **zsh**
+- Bspwm & Sxhkd
+- Alacritty & Nvim
+- Obsidian
+- zsh
 
 ---
 
@@ -72,16 +72,6 @@ touch /var/lib/iwd/'name_of_ssid.psk'
 echo "[Security]\n PreSharedKey=tu_contraseña_wifi"
 iwctl station 'interface' connect 'name_of_ssid'
 dhcpcd 'interface'
-
-And you have internet!
-
-But to be honest I like more use: wpa_supplicant (I know that is legacy...):
-
-ip link set 'interface' up
-wpa_passphrase "SSID" "contraseña" > wifi.conf (Temp file)
-wpa_supplicant -B -i 'interface' -c wifi.conf
-dhcpcd 'interface'
-
 ```
 
 ---
