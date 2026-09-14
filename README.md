@@ -1,18 +1,17 @@
 <div align="center">
-  <h1>Arch Linux</h1>
-  <h4>Minimal Environment (:3)</h4>
+  <h1>Arch Linux Minimal</h1>
   <p align="center">
         This is my workflow for develoment and hacking. Previously, I used `Kali-minimal`, and honestly, the differences are huge. 
   </p>
   <br />
 <ul>
-<span>My list</span>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
 
+<span>My environment</span>
+<li align="center">Bspwm & Sxhkd</li>
+<li align="center">Alacritty & Nvim</li>
+<li align="center">Obsidian</li>
+<li align="center">zsh</li>
+</ul>
 </div>
 
 Zsh Ctrl+L Binding
@@ -34,10 +33,10 @@ Disk: 100GB more is always better
 
 ### Screenshots
 
-|                                                                            |                                                                             |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| <img src="./Images/environment.png" alt="dark" style="border-radius:10%"/> | <img src="./Images/environment2.png" alt="dark" style="border-radius:10%"/> |
-| <img src="./environment.png" alt="dark" style="border-radius:10%"/>        | <img src="./environment_editor.png" alt="dark" style="border-radius:10%"/>  |
+|                                                                             |                                                                             |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| <img src="./Images/environment.png" alt="dark" style="border-radius:10%"/>  | <img src="./Images/environment2.png" alt="dark" style="border-radius:10%"/> |
+| <img src="./Images/environment3.png" alt="dark" style="border-radius:10%"/> | <img src="./environment_editor.png" alt="dark" style="border-radius:10%"/>  |
 
 ---
 
