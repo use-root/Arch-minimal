@@ -5,14 +5,16 @@
   </p>
   <br />
 <ul>
-
-<span>My environment</span>
-<li align="center">Bspwm & Sxhkd</li>
-<li align="center">Alacritty & Nvim</li>
-<li align="center">Obsidian</li>
-<li align="center">zsh</li>
-</ul>
 </div>
+
+### My environment
+
+- **Bspwm & Sxhkd**
+- **Alacritty & Nvim**
+- **Obsidian**
+- **zsh**
+
+</ul>
 
 Zsh Ctrl+L Binding
 bindkey — zsh builtin used to configure key bindings.
